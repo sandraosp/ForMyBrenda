@@ -62,8 +62,9 @@ public class Calculator {
 				throw new IllegalArgumentException(allNegatives);
 			}
 
-			else if(delimiter != null)
+			else if(delimiter != null){
 				System.out.println(total + "(the delimeter is " + delimiter + ")");
+			}
 
 		}
 
