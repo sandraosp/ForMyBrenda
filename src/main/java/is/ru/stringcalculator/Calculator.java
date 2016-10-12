@@ -50,7 +50,7 @@ public class Calculator {
 			}
 		    
 		    else if(toInt(number) < 0){
-		    	if(!allNegatives.isEmpty()){
+		    	if(!(allNegatives == "")){
 					
 					allNegatives = allNegatives + "," + number;
 				}
@@ -69,7 +69,5 @@ public class Calculator {
 
 		return total;
     }
-
-
 
 }
