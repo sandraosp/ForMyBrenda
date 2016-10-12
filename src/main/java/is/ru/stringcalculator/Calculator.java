@@ -6,6 +6,10 @@ public class Calculator {
 		if(text.equals("")){
 			return 0;
 		}
+		else if(text.contains("//")){
+			String delimiter = text.substring(text.indexOf("//") + 2, text.indexOf("\n"));
+			return sum(splitDelimiter(text, delimiter), delimiter);
+		}
 		else if(text.contains(",") || text.contains("\n")){
 			return sum(splitNumbers(text), null);
 		}
@@ -14,10 +18,6 @@ public class Calculator {
 		}*/
 		else if (text.contains("\n,") || text.contains(",\n")){
 			return 0;
-		}
-		else if(text.contains("//")){
-			String delimiter = text.substring(text.indexOf("//") + 2, text.indexOf("\n"));
-			return sum(splitDelimiter(text, delimiter), delimiter);
 		}
 		else
 			return toInt(text);
@@ -63,7 +63,7 @@ public class Calculator {
 			}
 
 			else if(delimiter != null)
-				System.out.println(total + "(the delimeter is" + delimiter + ")");
+				System.out.println(total + "(the delimeter is " + delimiter + ")");
 
 		}
 
