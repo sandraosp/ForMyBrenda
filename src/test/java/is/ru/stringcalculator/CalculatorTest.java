@@ -34,22 +34,21 @@ public class CalculatorTest {
     public void testNewlineBetweenNumbers(){
     	assertEquals(6, Calculator.add("1\n2,3"));
     	assertEquals(7, Calculator.add("2,2\n3"));
-    	assertEquals(9, Caclulator.add("2,3\n4"));
+    	assertEquals(9, Calculator.add("2,3\n4"));
     }
 
     @Test
     public void testNegativeNumbers(){
-    try
-	{
-		Calculator.add("-1,-2,-3");
-		Calculator.add("-1,2,-2");
-		Calculator.add("2,-5,3,-7");
-	}
-	catch (IllegalArgumentException a)
-	{
-	  	System.out.println("Negatives not allowed: " + a);
-    }
-
+		try
+		{
+			Calculator.add("-1,-2,-3");
+			Calculator.add("-1,2,-2");
+			Calculator.add("2,-5,3,-7");
+		}
+		catch (IllegalArgumentException a)
+		{
+			System.out.println("Negatives not allowed: " + a);
+		}
     }
 
     @Test
